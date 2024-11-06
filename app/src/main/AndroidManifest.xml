@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.maplocationapp">
+
+    <!-- Permissions for accessing the internet and fine location -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MapLocationApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MapLocationApp">
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAqD0Ll1mSQPTJCgXhV95m4ufQjkslXZvY" />
+
+        <!-- Declare activities with android:exported -->
+        <activity
+            android:name=".HumberBrowserActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MapViewActivity"
+            android:exported="false" />
+
+        <!-- Main activity with android:exported attribute explicitly set -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
